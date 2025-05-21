@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/svgs/logo/loginLogo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body class="w-screen h-screen">
+    <main id="app" class="w-full h-full">
+      <!-- loading: done -->
+      <section
+        class="w-full h-full flex items-center justify-center"
+        id="loading"
+      >
+        <img
+          src="/svgs/logo/loadingLogo.svg"
+          alt="loading logo"
+          class="w-[231px] h-[63px]"
+        />
+        <div
+          class="animate-spin border-5 border-black border-t-transparent delay-500 rounded-full w-12 h-12 absolute bottom-40"
+        ></div>
+      </section>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="src/pages/loading-page.js"></script>
+  </body>
+</html>

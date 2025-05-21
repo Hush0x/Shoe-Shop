@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg fill="none" viewBox="0 0 102 23" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#a)">
+<rect width="102" height="23" fill="#fff" fill-opacity=".01"/>
+<rect width="30.001" height="23" rx="1" fill="#fff" fill-opacity=".01"/>
+<rect transform="translate(0 10)" width="30.001" height="3.0002" fill="#000"/>
+<rect x="36.001" width="30.001" height="23" rx="1" fill="#fff" fill-opacity=".01"/>
+<g opacity=".5">
+<rect transform="translate(36.001 10)" width="30.001" height="3.0002" fill="#000"/>
+</g>
+<rect x="72.002" width="30.001" height="23" rx="1" fill="#fff" fill-opacity=".01"/>
+<g opacity=".5">
+<rect transform="translate(72.002 10)" width="30.001" height="3.0002" fill="#000"/>
+</g>
+</g>
+<defs>
+<clipPath id="a">
+<rect width="102" height="23" fill="#fff"/>
+</clipPath>
+</defs>
+</svg>
