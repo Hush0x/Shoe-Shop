@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="/svgs/logo/loginLogo.svg" />
+    <title>Home page</title>
+  </head>
+  <body class="w-screen h-screen font-inter">
+    <main class="w-full h-full flex flex-col px-6 justify-between">
+      <section class="w-full pt-4" id="headerContainer">
+        <div
+          class="w-full h-fit font-medium text-base text-[#757475] justify-between"
+          id="greeting"
+        ></div>
+        <div
+          class="w-full h-fit font-bold text-base text-black relative my-2.5"
+          id="notifContainer"
+        >
+          <div class="w-fit h-full absolute right-0 flex gap-2">
+            <img
+              src="/svgs/header-footer/notification.svg"
+              alt=""
+              class="w-6"
+            />
+            <img
+              src="/svgs/header-footer/like.svg"
+              alt="likeIcon"
+              class="w-6"
+              id="likeIcon"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="w-full h-9 px-3 py-2" id="searchBarContainer">
+        <div
+          class="w-full h-9 bg-[#FAFAFA] rounded-sm flex items-center relative"
+        >
+          <img
+            src="/svgs/input/search.svg"
+            alt="search-icon"
+            class="ml-3 absolute"
+          />
+          <input
+            type="text"
+            name=""
+            id=""
+            placeholder="search"
+            class="size-full px-9"
+          />
+        </div>
+      </section>
+      <section class="my-6 flex flex-col gap-3.5">
+        <div class="flex w-full justify-between font-semibold">
+          <p class="text-lg">Most Popular</p>
+          <button class="text-base">see all</button>
+        </div>
+        <div
+          class="w-full h-fit flex overflow-x-scroll scrollbar-hide"
+          id="filterContainer"
+        ></div>
+      </section>
+      <section
+        class="w-full h-full grid justify-between grid-cols-2 items-center grow overflow-y-scroll"
+        id="productContainer"
+      ></section>
+      <section
+        class="w-full h-16 flex items-center justify-evenly py-3"
+        id="footerContainer"
+      ></section>
+    </main>
+    <script type="module" src="src/main.js"></script>
+    <script type="module" src="src/pages/home-page.js"></script>
+  </body>
+</html>
