@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/svgs/logo/loginLogo.svg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Product</title>
+  </head>
+  <body class="w-screen h-screen font-inter">
+    <main class="w-full h-full" id="productPage">
+      <section
+        class="w-full flex items-center h-14 absolute px-6"
+        id="headerContainer"
+      ></section>
+      <section class="w-full" id="imageContainer"></section>
+      <section
+        class="w-full h-fit flex flex-col border-b-2 border-[#EEEFEF] my-5 px-6"
+        id="nameContainer"
+      >
+        <div class="flex relative my-3.5">
+          <h1 class="font-bold text-2xl" id="productName"></h1>
+          <img
+            src="/svgs/product/like.svg"
+            alt="like-icon"
+            id="likeIconProduct"
+            class="absolute right-0 cursor-pointer notActive"
+          />
+        </div>
+        <div class="flex items-center gap-1 mb-5">
+          <div
+            class="w-fit h-fit px-3 py-2 bg-[#F5F5F5] rounded-lg mr-2.5 text-xs"
+          >
+            <p>5.371 sold</p>
+          </div>
+          <img
+            src="/svgs/product/starIcon.svg"
+            alt="star-icon"
+            id="starIcon"
+            class="size-6"
+          />
+          <p class="text-[#414142] font-medium">4.3 (5,389 reviews)</p>
+        </div>
+      </section>
+      <section class="mb-4 px-6" id="descriptionContainer">
+        <h4 class="font-bold text-lg">Description</h4>
+        <p class="my-3.5 text-[#474748]">
+          Lorem ipsum dolor sit amet consectetur adipis icing elit. Repellendus
+          quasi ipsum
+          <span class="font-bold cursor-pointer" id="viewMore">view more..</span
+          ><span class="hidden" id="moreText">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, amet
+            est temporibus vel repellat quae excepturi, quibusdam in molestiae
+            incidunt iure aliquam exercitationem perspiciatis eaque eveniet
+            quasi ea voluptate voluptas.</span
+          ><span class="font-bold cursor-pointer hidden" id="viewLess"
+            >view less..</span
+          >
+        </p>
+      </section>
+      <form
+        id="pricingForm"
+        class="w-full flex grow items-start flex-col px-6 gap-y-4"
+      >
+        <div class="flex flex-col font-bold text-lg w-full justify-between">
+          <div class="flex w-full mb-3">
+            <h4 class="w-1/2">Size</h4>
+            <h4 class="w-1/2">Color</h4>
+          </div>
+          <div class="flex">
+            <div class="w-1/2" id="sizeContainer">
+              <div class="flex gap-2.5" id="sizeBoxes"></div>
+            </div>
+            <div class="w-1/2 overflow-x-scroll scrollbar-hide">
+              <div class="flex w-fit gap-2.5" id="colorBoxes"></div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex items-center gap-3 border-b-2 border-[#EEEFEF] py-3 w-full text-lg font-bold"
+        >
+          <p>Quantity</p>
+          <div
+            class="flex w-30 bg-[#F3F3F3] h-10 rounded-2xl items-center px-3 text-center"
+            id="counterBox"
+          ></div>
+        </div>
+        <div id="addToCart" class="flex justify-between w-full gap-6">
+          <div>
+            <p class="text-sm text-[#717171] font-medium">Total price</p>
+            <p class="font-bold">$<span id="totalPrice"></span>.00</p>
+          </div>
+        </div>
+      </form>
+    </main>
+    <script type="module" src="src/main.js"></script>
+    <script type="module" src="src/pages/product-page.js"></script>
+  </body>
+</html>
