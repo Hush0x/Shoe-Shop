@@ -13,7 +13,7 @@
     <title>Home page</title>
   </head>
   <body class="w-screen h-screen font-inter">
-    <main class="w-full h-full flex flex-col px-6 justify-between">
+    <main class="size-full flex flex-col px-6 justify-between">
       <section class="w-full pt-4" id="headerContainer">
         <div
           class="w-full h-fit font-medium text-base text-[#757475] justify-between"
@@ -38,7 +38,7 @@
           </div>
         </div>
       </section>
-      <section class="w-full h-9 px-3 py-2" id="searchBarContainer">
+      <section class="w-full h-9 px-3 py-2">
         <div
           class="w-full h-9 bg-[#FAFAFA] rounded-sm flex items-center relative"
         >
@@ -50,7 +50,7 @@
           <input
             type="text"
             name=""
-            id=""
+            id="searchInput"
             placeholder="search"
             class="size-full px-9"
           />
@@ -67,7 +67,7 @@
         ></div>
       </section>
       <section
-        class="w-full h-full grid justify-between grid-cols-2 items-center grow overflow-y-scroll"
+        class="size-full grid justify-between grid-cols-2 items-center grow overflow-y-scroll"
         id="productContainer"
       ></section>
       <section
@@ -77,5 +77,6 @@
     </main>
     <script type="module" src="src/main.js"></script>
     <script type="module" src="src/pages/home-page.js"></script>
+    <script type="module" src="apis/guard.js"></script>
   </body>
 </html>
