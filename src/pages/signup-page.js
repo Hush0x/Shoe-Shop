@@ -75,11 +75,14 @@ signupForm.addEventListener("submit", async (event) => {
     try {
         const res = await signupAccount(data)
         localStorage.setItem(tokenName, res.data.token)
-
+        showToast(`Welcome , ${data.username}!`, "valid")
+        setTimeout(() => {
+            window.location.href = "home.html";
+        }, 1500);
         signupForm.reset()
-        window.location.href = "/home.html";
     }
     catch (error) {
         console.log(error);
+        showToast(`This account is already exist`, "invalid")
     }
 });

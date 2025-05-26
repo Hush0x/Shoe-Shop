@@ -2,6 +2,7 @@ import { signPageGenerator } from '../functions/sign-page';
 import { generateAppButton } from '../../component/app-button';
 import { loginCheck } from '../../apis/auth';
 import { tokenName } from '../../apis/auth-token';
+import { showToast } from '../functions/show-toast';
 const loginContainer = document.getElementById("loginContainer")
 const SigninBtn = generateAppButton("Signin")
 SigninBtn.type = "submit"
@@ -76,9 +77,13 @@ loginForm.addEventListener("submit", async (event) => {
         const res = await loginCheck(data)
         localStorage.setItem(tokenName, res.data.token)
         loginForm.reset()
-        window.location.href = "home.html";
+        showToast(`Welcome back, ${data.username}!`, "valid")
+        setTimeout(() => {
+            window.location.href = "home.html";
+        }, 1500);
     }
     catch (error) {
         console.log(error);
+        showToast(`your account does not found!`, "invalid")
     }
 });
