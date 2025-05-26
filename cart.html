@@ -15,9 +15,9 @@
     <title>Cart Page</title>
   </head>
   <body class="w-screen h-screen font-inter bg-[#F8F8F8]">
-    <main class="w-full h-full px-6 flex flex-col">
+    <main class="w-full h-full flex flex-col relative" id="mainContainer">
       <section class="w-full h-16 items-center justify-between flex py-5">
-        <div class="flex items-center font-bold text-2xl gap-5">
+        <div class="flex items-center font-bold text-2xl gap-5 px-6">
           <img src="/svgs/logo/loginLogo.svg" alt="appLogo" class="size-8" />
           <h1>My Cart</h1>
         </div>
@@ -28,12 +28,24 @@
         />
       </section>
       <section
-        class="w-full grow py-3 overflow-y-scroll"
+        class="w-full grow py-3 overflow-y-scroll px-6"
         id="productContainer"
       ></section>
-      <section class="w-full h-16 flex items-center py-3"></section>
       <section
-        class="w-full h-16 flex items-center justify-evenly py-3"
+        class="w-full h-17 flex items-center py-3 bg-white px-6 rounded-t-4xl"
+      >
+        <div
+          class="w-2/5 flex flex-col gap-1 h-full font-normal text-[#8D8B8A]"
+        >
+          <p>Total price</p>
+          <p class="text-lg font-bold text-black">
+            $<span id="totalPrice"></span>.00
+          </p>
+        </div>
+        <div id="checkoutBtnContainer" class="w-3/5 font-semibold"></div>
+      </section>
+      <section
+        class="w-full h-16 flex items-center justify-evenly py-3 bg-white"
         id="footerContainer"
       ></section>
     </main>
