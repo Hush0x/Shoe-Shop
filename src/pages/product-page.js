@@ -2,7 +2,7 @@ import { getProduct } from "../../apis/auth"
 import { headBackArrow } from "../../component/header-back-arrow"
 import { generateColorBox } from "../functions/color-box"
 import { ProductCounterBox } from "../functions/product-counter"
-import { shoesOrderCart } from "../functions/shoes-order"
+import { showToast } from "../functions/show-toast"
 import { generateSizeBox } from "../functions/size-box"
 // 
 const headerContainer = document.getElementById("headerContainer")
@@ -61,10 +61,19 @@ const counterControl = ProductCounterBox(counterBoxContainer, shoesResponse.data
 
 pricingForm.addEventListener("submit", (event) => {
     event.preventDefault();
+    const selectedSize = localStorage.getItem("size");
+    const selectedColor = localStorage.getItem("color");
+    if (!selectedSize || !selectedColor) {
+        showToast("you should choose size and color!", "invalid");
+        return;
+    }
+    showToast("product added to your Cart page :)", "valid")
     sizeBoxes.innerHTML = "";
     colorBoxes.innerHTML = "";
+    localStorage.removeItem("color")
+    localStorage.removeItem("size")
     sizes.forEach(size => generateSizeBox(size, sizeBoxes));
-    colors.forEach(colorName => generateColorBox(colorMap[colorName], colorBoxes));
+    colors.forEach(colorName => generateColorBox(colorMap[colorName], colorBoxes, colorName));
     const newProduct = {
         imgUrl: shoesResponse.data.imageURL,
         name: shoesResponse.data.name,
@@ -85,8 +94,10 @@ likeIcon.addEventListener("click", () => {
     if (likeIcon.classList.contains("notActive")) {
         likeIcon.classList.remove("notActive");
         likeIcon.src = "/svgs/product/likeFill.svg";
+        showToast("Product added to your wishlist :)", "valid")
     } else {
         likeIcon.classList.add("notActive");
         likeIcon.src = "/svgs/product/like.svg";
+        showToast("Product removed from your wishlist :(", "invalid")
     }
 });

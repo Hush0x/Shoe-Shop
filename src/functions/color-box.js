@@ -1,6 +1,6 @@
 export function generateColorBox(color, target, colorName) {
     const colorBox = document.createElement("div")
-    colorBox.className = `size-10 rounded-full ${color} flex items-center justify-center`
+    colorBox.className = `size-10 rounded-full ${color} flex items-center justify-center cursor-pointer`
     colorBox.addEventListener("click", () => {
         colorBox.classList.add("active")
         colorBox.innerHTML = `<img src="/svgs/product/check.png" alt="checkIcon">`
@@ -18,6 +18,7 @@ export function generateColorBox(color, target, colorName) {
         localStorage.setItem("background", color)
     })
     target.appendChild(colorBox)
-    return colorBox
+    console.log(colorName);
 
+    return colorBox
 }

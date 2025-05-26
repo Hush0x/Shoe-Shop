@@ -1,6 +1,6 @@
 export function loadProducts(target, item) {
   const card = document.createElement("div");
-  card.className = "card flex flex-col gap-1 bg-base-100 w-44 h-60 cursor-pointer card";
+  card.className = "card flex flex-col gap-1 bg-base-100 w-44 h-60 cursor-pointer relative";
   card.id = item.id;
   card.setAttribute("brand", item.brand)
   card.innerHTML = `
@@ -17,4 +17,5 @@ export function loadProducts(target, item) {
     window.location.href = `/product.html?id=${item.id}`
   });
   target.appendChild(card);
+  return card
 }
