@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="/svgs/logo/loginLogo.svg" />
+    <title>Search</title>
+  </head>
+  <body class="w-screen h-screen font-inter px-6 py-3">
+    <main class="w-full h-full flex flex-col gap-4">
+      <form
+        class="w-full h-12 bg-[#F5F5F5] flex items-center relative rounded-xl"
+        id="searchForm"
+      >
+        <img
+          src="/svgs/input/search.svg"
+          alt="search-icon"
+          class="size-5 ml-3 absolute"
+        />
+        <input
+          type="text"
+          name="searchInput"
+          id="searchInput"
+          class="size-full px-10 rounded-xl"
+        />
+        <img
+          src="/svgs/input/filter.png"
+          alt="filterIcon"
+          class="size-5 mr-3 absolute right-0"
+        />
+      </form>
+      <section class="w-full h-7 hidden" id="searchHistoryContainer">
+        <div class="flex w-full h-7 justify-between border-[#EEEEEE]">
+          <p>Recent</p>
+          <p id="clearBtn" class="cursor-pointer">Clear All</p>
+        </div>
+        <div id="recentSearchContainer" class="flex flex-col w-full"></div>
+      </section>
+      <section
+        class="flex w-full h-7 justify-between"
+        id="searchResultContainer"
+      >
+        <p class="text-xl font-semibold">
+          Result for "<span id="searchText"></span>"
+        </p>
+        <p class="text-lg font-medium"><span id="foundCounts"></span> found</p>
+      </section>
+      <section class="size-full overflow-y-scroll" id="resultContainer">
+        <div
+          class="size-full grid justify-between grid-cols-2 items-center overflow-y-scroll"
+          id="productContainer"
+        ></div>
+        <div
+          id="notFoundContainer"
+          class="size-full flex flex-col items-center justify-center text-center text-lg hidden"
+        >
+          <img src="/svgs/input/not-found.png" alt="not-found" />
+          <h4 class="text-xl font-bold my-5">Not found</h4>
+          <p>
+            Sorry the keyword you entered cannot be found, please check again or
+            search with another keyword
+          </p>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="src/main.js"></script>
+    <script type="module" src="src/pages/search-page.js"></script>
+  </body>
+</html>
