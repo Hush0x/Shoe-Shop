@@ -10,11 +10,9 @@ cartIcon.alt = "cartIcon"
 export const fillCartIcon = document.createElement("img")
 fillCartIcon.src = `/svgs/header-footer/CartFill.svg`
 fillCartIcon.alt = "cartIcon"
-
 export const cartIconBorderWhite = document.createElement("img")
 cartIconBorderWhite.src = `/svgs/product/orderBorderWhite.svg`
 cartIconBorderWhite.alt = "cartIcon"
-
 export const orderIcon = document.createElement("img")
 orderIcon.src = `/svgs/header-footer/orders.svg`
 orderIcon.alt = "orderIcon"
@@ -39,3 +37,5 @@ export const slider2 = document.createElement("img")
 slider2.src = "/svgs/slide/slider2.svg";
 export const slider3 = document.createElement("img")
 slider3.src = "/svgs/slide/slider3.svg";
+export const addToWishlistIcon = document.createElement("img")
+addToWishlistIcon.src = "/svgs/product/add-to-wishlist.svg";
