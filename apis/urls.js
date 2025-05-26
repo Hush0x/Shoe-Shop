@@ -8,6 +8,6 @@ export const urls = {
         shoes: "/sneaker",
         brands: "/sneaker/brands",
         product: "/sneaker/item",
-
-    }
+    },
+    user: "/user",
 }

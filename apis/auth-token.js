@@ -1,1 +1,1 @@
-export const tokenName = "signed-users"
+export const tokenName = "token"

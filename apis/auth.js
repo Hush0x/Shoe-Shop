@@ -20,3 +20,7 @@ export function getProduct(productId) {
     const response = generateHttpClient().get(`${urls.allShoes.product}/${productId}`)
     return response;
 }
+export function getUser() {
+    const response = generateHttpClient().get(`${urls.user}`)
+    return response;
+}
