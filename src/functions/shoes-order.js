@@ -3,7 +3,7 @@ import { counterBox } from "./counterBox"
 
 export function shoesOrderCart(imgUrl, name, totalPrice, color, bg, size, count, target, deleteBtn) {
   const idName = name.replace(/ /g, "")
-  const uniqueId = `${idName}-${size}-${color}`;
+  const uniqueId = `${name}-${size}-${color}`;
   const shoppingCart = document.createElement("div");
   shoppingCart.innerHTML = `
     <div id="${uniqueId}-container" class="w-full p-4 flex bg-white h-fit items-center gap-x-5 rounded-2xl mb-6">

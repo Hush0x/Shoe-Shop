@@ -70,8 +70,6 @@ pricingForm.addEventListener("submit", (event) => {
     showToast("product added to your Cart page :)", "valid")
     sizeBoxes.innerHTML = "";
     colorBoxes.innerHTML = "";
-    localStorage.removeItem("color")
-    localStorage.removeItem("size")
     sizes.forEach(size => generateSizeBox(size, sizeBoxes));
     colors.forEach(colorName => generateColorBox(colorMap[colorName], colorBoxes, colorName));
     const newProduct = {

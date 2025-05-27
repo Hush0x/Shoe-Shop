@@ -42,25 +42,15 @@ function updateUI() {
     slideshow.style.transform = `translateX(-${currentStep * 100}%)`;
 }
 slide1btn.addEventListener("click", function () {
-    console.log("ok");
     if (currentStep < 3) {
         currentStep++;
         updateUI();
     }
 });
 slide2btn.addEventListener("click", function () {
-    console.log("ok");
-
     if (currentStep < 3) {
         currentStep++;
         updateUI();
-    }
-});
-slide3btn.addEventListener("click", function () {
-    if (currentStep === 3) {
-        currentStep++;
-        updateUI();
-        window.location.href = "signup.html";
     }
 });
 // 
