@@ -6,8 +6,8 @@ import { showToast } from '../functions/show-toast';
 const loginContainer = document.getElementById("loginContainer")
 const SigninBtn = generateAppButton("Signin")
 SigninBtn.type = "submit"
-SigninBtn.classList.remove("bg-[#212529]", "cursor-pointer")
-SigninBtn.classList.add("bg-[#6E7174]", "cursor-not-allowed")
+SigninBtn.classList.remove("bg-gray-900", "cursor-pointer")
+SigninBtn.classList.add("bg-gray-steel", "cursor-not-allowed")
 SigninBtn.disabled = true
 // generate pages
 signPageGenerator("Login to Your Account", "Signup", "loginForm", loginContainer)
@@ -58,12 +58,12 @@ loginForm.addEventListener("input", () => {
         (unCheck.length >= 5) &&
         (numbers.test(passCheck))
     ) {
-        SigninBtn.classList.add("bg-[#212529]", "cursor-pointer")
-        SigninBtn.classList.remove("bg-[#6E7174]", "cursor-not-allowed")
+        SigninBtn.classList.add("bg-gray-900", "cursor-pointer")
+        SigninBtn.classList.remove("bg-gray-steel", "cursor-not-allowed")
         SigninBtn.disabled = false
     } else {
-        SigninBtn.classList.remove("bg-[#212529]", "cursor-pointer");
-        SigninBtn.classList.add("bg-[#6E7174]", "cursor-not-allowed");
+        SigninBtn.classList.remove("bg-gray-900", "cursor-pointer");
+        SigninBtn.classList.add("bg-gray-steel", "cursor-not-allowed");
         SigninBtn.disabled = true;
     }
 })

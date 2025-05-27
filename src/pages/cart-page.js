@@ -43,11 +43,11 @@ document.addEventListener("click", (event) => {
       flex flex-col gap-5 px-6 py-4 z-50
     `;
         checkTask.innerHTML = `
-      <div class="py-5 border-b-2 border-[#ECECEC] flex items-center justify-center w-full">
+      <div class="py-5 border-b-2 border-gray-200 flex items-center justify-center w-full">
         <p class="text-lg font-semibold">Remove From Cart?</p>
       </div>
       <div class="flex justify-center gap-4 font-semibold w-full py-3">
-        <button id="cancelDelete" class="bg-[#E7E7E7] px-4 py-2 rounded-2xl w-1/2 h-16">Cancel</button>
+        <button id="cancelDelete" class="bg-gray-soft px-4 py-2 rounded-2xl w-1/2 h-16">Cancel</button>
         <button id="confirmDelete" class="bg-black text-white px-4 py-2 rounded-2xl w-1/2 h-16">Yes Remove</button>
       </div>
     `;

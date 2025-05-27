@@ -45,7 +45,7 @@ const colorMap = {
     white: "bg-white",
     red: "bg-red-500",
     blue: "bg-blue-500",
-    brown: "bg-[#7A5448]"
+    brown: "bg-brown-coffee"
 };
 colors.forEach(colorName => {
     const hex = colorMap[colorName];

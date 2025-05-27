@@ -22,7 +22,7 @@ export function shoesOrderCart(imgUrl, name, totalPrice, color, bg, size, count,
         </div>
         <div class="flex w-full items-center justify-between">
           <p class="text-xl font-bold" id="${uniqueId}-totalPrice">$${totalPrice}.00</p>
-          <div id="${uniqueId}-counterBoxContainer" class="w-24 flex items-center bg-[#F3F3F3] text-center h-10 px-3 rounded-2xl"></div>
+          <div id="${uniqueId}-counterBoxContainer" class="w-24 flex items-center bg-gray-100	 text-center h-10 px-3 rounded-2xl"></div>
         </div>
       </div>
     </div>

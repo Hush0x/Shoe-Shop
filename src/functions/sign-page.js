@@ -6,7 +6,7 @@ export function signPageGenerator(labelText, btnText, formId, page) {
         <form class="w-full flex flex-col items-center grow" id=${formId}>
           <div class="w-full flex flex-col items-center grow">
             <div
-              class="bg-[#FAFAFA] flex items-center gap-1 h-9 w-full rounded-b-sm relative"
+              class="bg-gray-50	 flex items-center gap-1 h-9 w-full rounded-b-sm relative"
               id ="${formId}-userNameContainer"
             >
               <img
@@ -27,7 +27,7 @@ export function signPageGenerator(labelText, btnText, formId, page) {
             <p class="text-red-500 text-xs invisible" id="${formId}-Un-error">Your username must be at least 8 characters long!</p>
             </div>
             <div
-              class="bg-[#FAFAFA] flex items-center h-9 w-full rounded-b-sm mt-2.5 relative"
+              class="bg-gray-50	 flex items-center h-9 w-full rounded-b-sm mt-2.5 relative"
               id="${formId}-passwordContainer"
             >
               <img

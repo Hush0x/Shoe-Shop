@@ -5,11 +5,11 @@ import { tokenName } from '../../apis/auth-token';
 const signupContainer = document.getElementById("signupContainer")
 const signupBtn = generateAppButton("Signup")
 signupBtn.type = "submit"
-signupBtn.classList.remove("bg-[#212529]", "cursor-pointer")
-signupBtn.classList.add("bg-[#6E7174]", "cursor-not-allowed")
+signupBtn.classList.remove("bg-gray-900", "cursor-pointer")
+signupBtn.classList.add("bg-gray-steel", "cursor-not-allowed")
 signupBtn.disabled = true
-signupBtn.classList.remove("bg-[#212529]")
-signupBtn.classList.add("bg-[#6E7174]")
+signupBtn.classList.remove("bg-gray-900")
+signupBtn.classList.add("bg-gray-steel")
 signupBtn.disabled = true
 signPageGenerator("Signup to Your Account", "login", "signUpForm", signupContainer)
 const goToLogin = document.getElementById("loginBtn")
@@ -56,12 +56,12 @@ signupForm.addEventListener("input", () => {
         (unCheck.length >= 5) &&
         (numbers.test(passCheck))
     ) {
-        signupBtn.classList.add("bg-[#212529]", "cursor-pointer")
-        signupBtn.classList.remove("bg-[#6E7174]", "cursor-not-allowed")
+        signupBtn.classList.add("bg-gray-900", "cursor-pointer")
+        signupBtn.classList.remove("bg-gray-steel", "cursor-not-allowed")
         signupBtn.disabled = false
     } else {
-        signupBtn.classList.remove("bg-[#212529]", "cursor-pointer");
-        signupBtn.classList.add("bg-[#6E7174]", "cursor-not-allowed");
+        signupBtn.classList.remove("bg-gray-900", "cursor-pointer");
+        signupBtn.classList.add("bg-gray-steel", "cursor-not-allowed");
         signupBtn.disabled = true;
     }
 })

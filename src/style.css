@@ -1,6 +1,18 @@
 @import "tailwindcss";
 @theme {
+  /* font */
   --font-inter: "inter";
+  /* colors */
+  --color-light-gray: #f8f8f8;
+  --color-gray-soft: #e7e7e7;
+  --color-brown-coffee: #7a5448;
+  --color-gray-warm: #8d8b8a;
+  --color-gray-muted: #757475;
+  --color-gray-deep: #474748;
+  --color-gray-steel: #6e7174;
+  --color-gray-neutral: #717171;
+  --color-gray-balanced: #7f7f7f;
+  --color-gray-cool: #eeefef;
 }
 .scrollbar-hide {
   -ms-overflow-style: none;

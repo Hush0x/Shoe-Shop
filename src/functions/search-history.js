@@ -1,6 +1,6 @@
 export function searchHistoryGenerator(lastSearch, target, takeRecentSearch) {
     const container = document.createElement("div")
-    container.className = "w-full h-fit flex text-base font-medium py-2 text-[#7F7F7F] items-center justify-between cursor-pointer"
+    container.className = "w-full h-fit flex text-base font-medium py-2 text-gray-balanced items-center justify-between cursor-pointer"
     container.id = `${lastSearch}-container`
     container.innerHTML = `
         <p id="${lastSearch}-text">${lastSearch}</p>

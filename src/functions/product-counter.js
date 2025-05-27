@@ -17,8 +17,8 @@ export function ProductCounterBox(target, total, totalContainer, btnContainer, b
     const addToCartBtn = generateAppButton(btnText);
     addToCartBtn.innerHTML += `<img src="${cartIconBorderWhite.src}" alt="minus" class="size-5 minus-icon" id="minusIcon" />`
     addToCartBtn.type = "submit"
-    addToCartBtn.classList.remove("w-96", "my-8", "bg-[#212529]", "cursor-pointer");
-    addToCartBtn.classList.add("grow", "flex-row-reverse", "gap-5", "my-auto", "bg-[#6E7174]", "cursor-not-allowed");
+    addToCartBtn.classList.remove("w-96", "my-8", "bg-gray-900", "cursor-pointer");
+    addToCartBtn.classList.add("grow", "flex-row-reverse", "gap-5", "my-auto", "bg-gray-steel", "cursor-not-allowed");
     addToCartBtn.disabled = true;
     btnContainer.appendChild(addToCartBtn);
     function updateUI() {
@@ -28,11 +28,11 @@ export function ProductCounterBox(target, total, totalContainer, btnContainer, b
         addToCartBtn.disabled = numb === 0;
         localStorage.setItem("total-price", newTotal);
         if (numb === 0) {
-            addToCartBtn.classList.remove("bg-[#212529]", "cursor-pointer");
-            addToCartBtn.classList.add("bg-[#6E7174]", "cursor-not-allowed");
+            addToCartBtn.classList.remove("bg-gray-900", "cursor-pointer");
+            addToCartBtn.classList.add("bg-gray-steel", "cursor-not-allowed");
         } else {
-            addToCartBtn.classList.remove("bg-[#6E7174]", "cursor-not-allowed");
-            addToCartBtn.classList.add("bg-[#212529]", "cursor-pointer");
+            addToCartBtn.classList.remove("bg-gray-steel", "cursor-not-allowed");
+            addToCartBtn.classList.add("bg-gray-900", "cursor-pointer");
         }
         localStorage.setItem("count", numb)
     }
