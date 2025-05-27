@@ -18,7 +18,7 @@ function slidePageGenerator(imageSrc, slideTextContent, page, btn, slider) {
     slideContainer.appendChild(slideText)
     // slider container
     const sliderContainer = document.createElement("div")
-    slider.className = "w-[102px] h-[23px] mx-auto"
+    slider.className = "w-24 h-6 mx-auto"
     sliderContainer.appendChild(slider)
     // button
     sliderContainer.appendChild(btn)
